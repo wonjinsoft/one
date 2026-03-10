@@ -1,1 +1,173 @@
-/* Add styles here */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(45deg, #f9f9f9 25%, transparent 25%),
+                      linear-gradient(-45deg, #f9f9f9 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, #f9f9f9 75%),
+                      linear-gradient(-45deg, transparent 75%, #f9f9f9 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.social-btn.google {
+    background-color: #fff;
+    color: #757575;
+    border: 1px solid #ddd;
+}
+
+.social-btn.google:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-btn.apple {
+    background-color: #000;
+    color: #fff;
+}
+
+.social-btn.apple:hover {
+    background-color: #333;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn.facebook {
+    background-color: #1877f2;
+    color: #fff;
+}
+
+.social-btn.facebook:hover {
+    background-color: #166fe5;
+    box-shadow: 0 6px 20px rgba(24, 119, 242, 0.3);
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #aaa;
+}
+
+.separator span {
+    padding: 0 10px;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box; 
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1877f2;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.2);
+}
+
+.login-btn:hover {
+    background-color: #166fe5;
+    box-shadow: 0 6px 20px rgba(24, 119, 242, 0.3);
+}
+
+.signup {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.signup a {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
