@@ -2,9 +2,67 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>세상아 안녕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설비 관리 시스템</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>세상아 안녕</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="menu-register">설비정보등록</a></li>
+                <li><a href="#" id="menu-list">설비목록보기</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- 설비 등록 화면 -->
+        <section id="section-register" class="content-section">
+            <h2>설비 정보 등록</h2>
+            <form id="form-register">
+                <div class="form-group">
+                    <label for="fac-name">설비명:</label>
+                    <input type="text" id="fac-name" name="name" required placeholder="예: 1호기 컨베이어">
+                </div>
+                <div class="form-group">
+                    <label for="fac-type">설비종류:</label>
+                    <input type="text" id="fac-type" name="type" required placeholder="예: 자동화">
+                </div>
+                <div class="form-group">
+                    <label for="fac-location">위치:</label>
+                    <input type="text" id="fac-location" name="location" required placeholder="예: A-1 라인">
+                </div>
+                <div class="form-group">
+                    <label for="fac-manager">관리자:</label>
+                    <input type="text" id="fac-manager" name="manager" required placeholder="예: 홍길동">
+                </div>
+                <button type="submit" class="btn-primary">등록하기</button>
+            </form>
+        </section>
+
+        <!-- 설비 목록 화면 -->
+        <section id="section-list" class="content-section" style="display:none;">
+            <h2>설비 목록</h2>
+            <div id="list-container">
+                <table id="table-list">
+                    <thead>
+                        <tr>
+                            <th>설비명</th>
+                            <th>설비종류</th>
+                            <th>위치</th>
+                            <th>관리자</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-list">
+                        <!-- 데이터 로드 시 행 추가 -->
+                    </tbody>
+                </table>
+                <p id="empty-msg" style="display:none;">등록된 설비가 없습니다.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
 </body>
 </html>

@@ -7,9 +7,11 @@
   packages = [
     pkgs.nodejs_20
     pkgs.python3
+    pkgs.redis
   ];
   # Sets environment variables in the workspace
   env = {};
+  services.redis.enable = true;
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
@@ -21,8 +23,11 @@
       enable = true;
       previews = {
         web = {
-          command = ["python3" "-m" "http.server" "$PORT" "--bind" "0.0.0.0"];
+          command = ["node" "server.js"];
           manager = "web";
+          env = {
+            PORT = "$PORT";
+          };
         };
       };
     };
